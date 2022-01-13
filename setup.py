@@ -10,9 +10,7 @@ VERSION = '0.150.1'
 
 # avoid building universal binary (ppc) on osx non-ppc platforms
 if sys.platform == 'darwin':
-    arch = platform.machine()
-    if arch in ('i386', 'x86_64'):
-        os.environ['ARCHFLAGS'] = '-arch i386 -arch x86_64'
+    os.environ['ARCHFLAGS'] = '-arch x86_64'
 
 smhasher_ext = Extension('smhasher',
     sources=[

@@ -7,7 +7,7 @@
 
 // Python extension code by Patrick Hensley
 
-
+#define PY_SSIZE_T_CLEAN
 #include <Python.h>
 #include "MurmurHash3.h"
 

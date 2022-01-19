@@ -8,10 +8,6 @@ from distutils.core import setup, Extension
 # creates a formal version number.
 VERSION = '0.150.1'
 
-# avoid building universal binary (ppc) on osx non-ppc platforms
-if sys.platform == 'darwin':
-    os.environ['ARCHFLAGS'] = '-arch x86_64'
-
 smhasher_ext = Extension('smhasher',
     sources=[
         'smhasher.cpp',
